@@ -17,17 +17,20 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #202020;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.active {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(87%) saturate(0%)
+    hue-rotate(158deg) brightness(105%) contrast(101%);
+}
+.inactive {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(77%) saturate(178%)
+    hue-rotate(232deg) brightness(114%) contrast(90%);
 }
